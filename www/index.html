@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Trip Chronicle</title>
+        <!-- jquery -->
+        <link rel="stylesheet" href="jquery/jquery.mobile-1.3.2.min.css">
+        <script type="text/javascript" src="jquery/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="jquery/jquery.mobile-1.3.2.min.js"></script>
+        
+        <!-- cordova -->
+        <script type='text/javascript' src="phonegap.js"></script>
+        <script type="text/javascript">
+            //Check if cordova.js is included
+            if((typeof cordova == 'undefined')&&(typeof Cordova == 'undefined'))
+                console.error("**DEBUG**: Make sure that cordova.js is included in the current directory.");
+
+            document.addEventListener("deviceready", navigate, false);
+            
+            function navigate(){
+                    //if user already logged in goto welcome page.
+                    if(window.localStorage.getItem("logged_in"))
+                        window.location.replace("html/welcome.html");
+                    //if first time using the app or logged out goto facebook_permission page
+                    else
+                        window.location.replace("html/facebook_permission.html");
+            }
+        </script>
+    </head>
+	<body>
+		<div data-role="page">
+			<div data-role="header" data-position="fixed">
+				<h1>Trip Chronicle</h1>
+			</div>
+        	
+        	<div data-role="content">
+        		loading ...
+        	</div>
+        	
+        	<div data-role="footer" data-position="fixed">
+        		<h1></h1>
+        	</div>
+		</div>
+	</body>
+</html>

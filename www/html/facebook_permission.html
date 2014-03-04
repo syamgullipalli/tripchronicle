@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Trip Chronicle</title>
+        <!-- jquery -->
+        <link rel="stylesheet" href="../jquery/jquery.mobile-1.3.2.min.css">
+        <script type="text/javascript" src="../jquery/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="../jquery/jquery.mobile-1.3.2.min.js"></script>
+        
+        <!-- jqm icon pack -->
+        <link rel="stylesheet" href="../jqm_icon_pack/jqm-icon-pack-fa.css">
+        
+        <!-- cordova -->
+        <script type="text/javascript" src="../phonegap.js"></script>
+        
+        <!-- cordova facebook plugin -->
+        <script type='text/javascript' src="../cdv-plugin-fb-connect.js" ></script>
+
+        <!-- facebook js sdk -->
+        <script type='text/javascript' src="../facebook-js-sdk.js" ></script>
+        
+        <!-- facebook login for Trip Chronicle -->
+        <script type='text/javascript' src="../js/facebook_init.js"></script>
+        
+    </head>
+    <body>
+    	<div data-role="page">
+    		<div data-role="header" data-position="fixed">
+    			<h1>Trip Chronicle</h1>
+    		</div>
+    		
+    		<div data-role="content">
+    			<h2>Trip Chronicle requires your facebook access.</h2>
+        		<h3>Proceed with facebook login</h3>
+        		<button onclick="fbInit()" data-icon="facebook" data-transition="pop" data-iconpos="bottom">OK</button>
+        		<button onclick="exitApp()" data-icon="remove" data-transition="fade" data-iconpos="bottom">No, thanks</button>
+    		</div>
+    		
+    		<div data-role="footer" data-position="fixed">
+    			<div data-role="navbar">
+    				<ul>
+    					<li><a onclick="fbInit()" data-icon="facebook"></a></li>
+    					<li><a onclick="exitApp()" data-icon="remove"></a></li>
+    				</ul>
+    			</div>
+    		</div>
+    	</div>
+    </body>
+</html>

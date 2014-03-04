@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Past Tour Map</title>
+<!-- cordova -->
+<script type="text/javascript" src="../phonegap.js"></script>
+
+<!-- jquery -->
+<link rel="stylesheet" href="../jquery/jquery.mobile-1.3.2.min.css">
+<script type="text/javascript" src="../jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript"
+	src="../jquery/jquery.mobile-1.3.2.min.js"></script>
+<!-- jqm icon pack -->
+<link rel="stylesheet" href="../jqm_icon_pack/jqm-icon-pack-fa.css">
+</head>
+<body>
+	<!-- /page -->
+	<div data-role="page">
+		<div data-role="header" data-position="fixed" id="current_map-page">
+			<h1>Trip Chronicle</h1>
+			<a data-rel="back" data-icon="circle-arrow-left" class="ui-btn-left">Back</a>
+		</div>
+
+		<!-- google maps v3 -->
+		<script type="text/javascript"
+			src="http://maps.google.com/maps/api/js?v=3&sensor=true&language=en&callback=initialize"></script>
+
+		<!-- Image conversion -->
+		<script type="text/javascript" src="../js/base64-binary.js"></script>
+
+		<!-- past_tour_map.js -->
+		<script type="text/javascript" src="../js/past_tour_map.js"></script>
+		<!-- /content -->
+		<div data-role="content" class="map" id="map_canvas"
+			style="padding: 1em;">
+			<div class="current tour-list"></div>
+			<div id="map_canvas"></div>
+			<div data-role="popup" id="popup" data-position-to="window">
+				<h3>Image</h3>
+				<ul data-role="listview" class="mrk btn">
+					<li><a class="btn imgdata">Images</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
